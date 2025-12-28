@@ -40,7 +40,7 @@
       const destElementX = document.getElementById('destX');
       const destElementZ = document.getElementById('destZ');
       const degreesElement = document.getElementById('degrees');
-      document.addEventListener('change', () => {
+      const setDegrees = () => {
         const currentX = currentElementX.value || 0;
         const currentZ = currentElementZ.value || 0;
         const destX = destElementX.value || 0;
@@ -59,7 +59,9 @@
           }
         }
         degreesElement.innerHTML = degrees;
-      })
+      };
+      setDegrees();
+      document.addEventListener('change', setDegrees)
       
       
     })();
